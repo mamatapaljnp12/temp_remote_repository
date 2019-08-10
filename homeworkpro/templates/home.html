@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 class="text-center"> Employee Datial</h1>
+{% if data %}
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <th>EmpName</th>
+                <th>Empcontactnumber</th>
+                <th>EmpEmail</th>
+                <th>EmpAddress</th>
+            </tr>
+        </thead>
+        {% for i in data %}
+        <tbody>
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.contactnumber }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.address }}</td>
+            </tr>
+        </tbody>
+    {% endfor %}
+    </table>
+
+{% endif %}
+
+
+
+</body>
+</html>
